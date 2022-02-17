@@ -3,3 +3,28 @@ html {
   margin: 0;
   padding: 0;
 }
+
+header {
+  /*Marge verticale*/
+  padding: 25px 0px;
+  /*Couleur de fond*/
+  background-color: #99a79a;
+  /* Texte centré */
+  text-align: center;
+}
+
+.column {
+  /*Taille colonne centrale - padding */
+  width: 930px;
+  /*Couleur de fond*/
+  background-color: #ffffff;
+  /*Centrage de la colonne*/
+  margin: auto;
+  /*margin tonic interne */
+  padding: 25px;
+}
+
+p {
+  font: 1em Tahoma, Geneva, sans-serif;
+  margin-bottom: 1em;
+}
