@@ -44,9 +44,6 @@ foreach ($errors as $error) {
 
 <form action="" method="post">
 
-
-
-<form>
   <div class="mb-3">
     <label for="username" class="form-label">Identifiant</label>
     <input type="text" class="form-control" id="username" name="username">  
