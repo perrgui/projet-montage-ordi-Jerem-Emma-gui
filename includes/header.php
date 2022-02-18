@@ -25,7 +25,11 @@ if (isset($_POST['login']) && $_POST['password'] == $motDePasse && !empty($_POST
     <title>Montage Ordinateur</title>
 </head>
 
+<body>
+  <header>
+  <div class='d-flex justify-cent'>
   <h1>je sais plus comment on s'appelle ..</h1>
+   </div>
   <h3> C'EST BIENTOT LA PAUSE ! </h3>
 
 
@@ -36,7 +40,9 @@ if (isset($_POST['login']) && $_POST['password'] == $motDePasse && !empty($_POST
         <!-- <a class="navbar-brand" href="?page=liste">Commandes</a> -->
         <!-- <a class="navbar-brand" href="?page=com">Salon de thé</a> -->
 
+       
         <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+           
   <a href="#" class="navbar-brand font-weight-bold d-block d-lg-none">Boite à Outils</a>
   <button type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
           <span class="navbar-toggler-icon"></span>
@@ -46,28 +52,38 @@ if (isset($_POST['login']) && $_POST['password'] == $motDePasse && !empty($_POST
     <ul class="navbar-nav mx-auto">
      
 
-      <!-- Boite à Outils menu déroulant -->
-      <li class="nav-item dropdown boiteaoutils">
-        <a id="megamneu" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold text-uppercase">Boite à Outils</a>
-        <div aria-labelledby="megamneu" class="dropdown-menu border-0 p-0 m-0">
+
+                      <!-- STOCK menu déroulant-->
+                      <li class="nav-item dropdown boiteaoutils">
+        <a id="boiteàoutils" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold text-uppercase">Stock</a>
+        <div aria-labelledby="boiteaoutils" class="dropdown-menu border-0 p-0 m-0">
           <div class="container">
             <div class="row bg-white rounded-0 m-0 shadow-sm">
               <div class="col-lg-7 col-xl-8">
                 <div class="p-4">
                   <div class="row">
                     <div class="col-lg-6 mb-4">
-                      <!-- STOCK -->
-                      <h6 class="font-weight-bold text-uppercase">Stock</h6>
                       <ul class="list-unstyled">
                         <li class="nav-item"><a href="" class="nav-link text-small pb-0">Liste </a></li>
                         <li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Modifier</a></li>
                         <li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Créer</a></li>
                       </ul>
+</li>
                     </div>
                     
-                    <!-- MODELES -->
+
+
+                    <!-- MODELES menu déroulant -->
+                     <li class="nav-item dropdown boiteaoutils">
+        <a id="boiteàoutils" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold text-uppercase">Modèles</a>
+        <div aria-labelledby="boiteaoutils" class="dropdown-menu border-0 p-0 m-0">
+          <div class="container">
+            <div class="row bg-white rounded-0 m-0 shadow-sm">
+              <div class="col-lg-7 col-xl-8">
+                <div class="p-4">
+                  <div class="row">
                     <div class="col-lg-6 mb-4">
-                      <h6 class="font-weight-bold text-uppercase">Modèles</h6>
+                    <div class="col-lg-6 mb-4">
                       <ul class="list-unstyled">
                         <li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Catalogue</a></li>
                         <li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Modifier un modèle</a></li>
@@ -75,9 +91,22 @@ if (isset($_POST['login']) && $_POST['password'] == $motDePasse && !empty($_POST
                       </ul>
                     </div>
 
-                    <!-- STATISTIQUE -->
+
+
+
+
+                    <!-- STATISTIQUE menue déroulant -->
+                    <li class="nav-item dropdown boiteaoutils">
+        <a id="boiteàoutils" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold text-uppercase">Statistiques</a>
+        <div aria-labelledby="boiteaoutils" class="dropdown-menu border-0 p-0 m-0">
+          <div class="container">
+            <div class="row bg-white rounded-0 m-0 shadow-sm">
+              <div class="col-lg-7 col-xl-8">
+                <div class="p-4">
+                  <div class="row">
                     <div class="col-lg-6 mb-4">
-                      <h6 class="font-weight-bold text-uppercase">Statistiques machines</h6>
+                    <div class="col-lg-6 mb-4">
+                      <h6 class="font-weight-bold text-uppercase">Machines</h6>
                       <ul class="list-unstyled">
                         <li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Modèles montés</a></li>
                         <li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Commentaires de montage</a></li>
@@ -85,7 +114,16 @@ if (isset($_POST['login']) && $_POST['password'] == $motDePasse && !empty($_POST
                       </ul>
                     </div>
 
-                    <!-- COMMANDES -->
+                    <!-- COMMANDES menue déroulant -->
+                    <li class="nav-item dropdown boiteaoutils">
+        <a id="boiteàoutils" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold text-uppercase">Commandes</a>
+        <div aria-labelledby="boiteaoutils" class="dropdown-menu border-0 p-0 m-0">
+          <div class="container">
+            <div class="row bg-white rounded-0 m-0 shadow-sm">
+              <div class="col-lg-7 col-xl-8">
+                <div class="p-4">
+                  <div class="row">
+                    <div class="col-lg-6 mb-4">
                     <div class="col-lg-6 mb-4">
                       <h6 class="font-weight-bold text-uppercase">A faire</h6>
                       <ul class="list-unstyled">
@@ -118,10 +156,11 @@ if (isset($_POST['login']) && $_POST['password'] == $motDePasse && !empty($_POST
         <?php
         }
         ?>
+         
     </nav>
+   
 </header>
-<body>
-   <!-- <div class="column-left"></div> -->
+ <!-- <div class="column-left"></div> -->
     <div class="column">
     <?php
     if (!empty($_GET['disconnected']) && $_GET['disconnected'] == 1) {
@@ -131,3 +170,5 @@ if (isset($_POST['login']) && $_POST['password'] == $motDePasse && !empty($_POST
     }
     ?>
       
+      </body>
+  

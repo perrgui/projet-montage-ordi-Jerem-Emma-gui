@@ -6,17 +6,19 @@
   background: none;
   border: none;
   width: 100%;
+  align-items: start;
 }
 
 body {
-  background: #eaafc8;
-  background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);
-  background: linear-gradient(to right, #eaafc8, #654ea3);
+  background: #000000;
+  color: #fff;
+  background: -webkit-linear-gradient(to right, #000000, #434343);
+  background: linear-gradient(to right, #000000, #434343);
   min-height: 100vh;
 }
 
 code {
-  color: #745eb1;
+  color: blanchedalmond;
   background: #fff;
   padding: 0.1rem 0.2rem;
   border-radius: 0.2rem;
@@ -24,4 +26,12 @@ code {
 
 .text-uppercase {
   letter-spacing: 0.08em;
+}
+
+h1 {
+  color: white;
+}
+
+h3 {
+  color: white;
 }
