@@ -13,7 +13,7 @@ $modeles = [
         "quantité" => 5,
         "date ajout" => 17/02/2019,
         "nb" => 15,
-        "est portable" => 1,
+        "est portable" => 0,
     ],
 
     2=> [
@@ -21,7 +21,7 @@ $modeles = [
         "quantité" => 20,
         "date ajout" => 17/02/2022,
         "nb" => 250,
-        "est portable" => 1,
+        "est portable" => 0,
     ],
 
         1=> [
@@ -29,7 +29,7 @@ $modeles = [
         "quantité" => 70,
         "date ajout" => 24/04/2021,
         "nb" => 186,
-        "est portable" => 1,
+        "est portable" => 0,
     ],
 
     3=> [
@@ -37,7 +37,7 @@ $modeles = [
         "quantité" => 150,
         "date ajout" => 03/05/2019,
         "nb" => 50,
-        "est portable" => 2,
+        "est portable" => 1,
     ],
 
         4=> [
@@ -45,7 +45,7 @@ $modeles = [
         "quantité" => 300,
         "date ajout" => 08/06/2018,
         "nb" => 100,
-        "est portable" =>  1,
+        "est portable" =>  0,
     ],
 
     5=> [
@@ -53,7 +53,7 @@ $modeles = [
         "quantité" => 200,
         "date ajout" => 02/01/2022,
         "nb" => 46,
-        "est portable" =>  2,
+        "est portable" =>  1,
     ],
 
         6=> [
@@ -61,7 +61,7 @@ $modeles = [
         "quantité" => 483,
         "date ajout" => 16/11/2021,
         "nb" => 95,
-        "est portable" => 2,
+        "est portable" => 1,
     ],
 
     7=> [
@@ -69,7 +69,7 @@ $modeles = [
         "quantité" => 356,
         "date ajout" => 04/12/2018,
         "nb" => 90,
-        "est portable" =>  2,
+        "est portable" =>  1,
     ],
 
         8=> [
@@ -77,7 +77,7 @@ $modeles = [
         "quantité" => 20,
         "date ajout" => 14/05/2021,
         "nb" => 256,
-        "est portable" => 1,
+        "est portable" => 0,
     ],
 
     9=> [
@@ -85,7 +85,7 @@ $modeles = [
         "quantité" => 263,
         "date ajout" => 12/06/2021,
         "nb" => 58,
-        "est portable" => 1,
+        "est portable" => 0,
     ],
 
         10=> [
@@ -93,7 +93,7 @@ $modeles = [
         "quantité" => 346,
         "date ajout" => 02/10/2020,
         "nb" => 632,
-        "est portable" => 1,
+        "est portable" => 0,
         ],
 
     ];
