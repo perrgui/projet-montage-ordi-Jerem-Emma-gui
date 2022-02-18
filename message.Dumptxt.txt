@@ -1,0 +1,125 @@
+CREATE TABLE Utilisateur(
+   idUtilisateur INT AUTO_INCREMENT,
+   password VARCHAR(128),
+   CONSTRAINT Utilisateur_PK PRIMARY KEY(idUtilisateur)
+);
+
+CREATE TABLE Ordinateur(
+   idOrdinateur INT AUTO_INCREMENT,
+   estPortable BOOLEAN,
+   idUtilisateur INT NOT NULL,
+   CONSTRAINT Ordinateur_PK PRIMARY KEY(idOrdinateur),
+   CONSTRAINT Ordinateur_Utilisateur_FK FOREIGN KEY(idUtilisateur) REFERENCES Utilisateur(idUtilisateur)
+);
+
+CREATE TABLE Composant(
+   idComposant INT AUTO_INCREMENT,
+   categorie VARCHAR(50),
+   modele VARCHAR(50),
+   marque VARCHAR(50),
+   prix DECIMAL(15,2),
+   quantiteEnStock INT,
+   nombreModeleCreer INT,
+   dateAjout DATE,
+   isPereferique BOOLEAN,
+   idOrdinateur INT NOT NULL,
+   CONSTRAINT Composant_PK PRIMARY KEY(idComposant),
+   CONSTRAINT Composant_Ordinateur_FK FOREIGN KEY(idOrdinateur) REFERENCES Ordinateur(idOrdinateur)
+);
+
+CREATE TABLE Processeur(
+   idComposant INT,
+   frequences DECIMAL(15,2),
+   nbcoeurs INT,
+   chipset VARCHAR(50),
+   CONSTRAINT Processeur_PK PRIMARY KEY(idComposant),
+   CONSTRAINT Processeur_Composant_FK FOREIGN KEY(idComposant) REFERENCES Composant(idComposant)
+);
+
+CREATE TABLE SystemeStockage(
+   idComposant INT,
+   estSsd BOOLEAN,
+   capacite INT,
+   CONSTRAINT SystemeStockage_PK PRIMARY KEY(idComposant),
+   CONSTRAINT SystemeStockage_Composant_FK FOREIGN KEY(idComposant) REFERENCES Composant(idComposant)
+);
+
+CREATE TABLE MemoireVive(
+   idComposant INT,
+   capacite DECIMAL(15,2),
+   nbBarettes INT,
+   typeFreqNormes VARCHAR(50),
+   CONSTRAINT MemoireVive_PK PRIMARY KEY(idComposant),
+   CONSTRAINT MemoireVive_Composant_FK FOREIGN KEY(idComposant) REFERENCES Composant(idComposant)
+);
+
+CREATE TABLE CartGraphique(
+   idComposant INT,
+   chipset VARCHAR(50),
+   memoire DECIMAL(15,2),
+   CONSTRAINT CartGraphique_PK PRIMARY KEY(idComposant),
+   CONSTRAINT CartGraphique_Composant_FK FOREIGN KEY(idComposant) REFERENCES Composant(idComposant)
+);
+
+CREATE TABLE Souris(
+   idComposant INT,
+   estPad BOOLEAN,
+   estFilaire BOOLEAN,
+   nbTouche INT,
+   CONSTRAINT Souris_PK PRIMARY KEY(idComposant),
+   CONSTRAINT Souris_Composant_FK FOREIGN KEY(idComposant) REFERENCES Composant(idComposant)
+);
+
+CREATE TABLE Clavier(
+   idComposant INT,
+   estFilaire BOOLEAN,
+   estPaveNumerique BOOLEAN,
+   typeDeTouche VARCHAR(50),
+   CONSTRAINT Clavier_PK PRIMARY KEY(idComposant),
+   CONSTRAINT Clavier_Composant_FK FOREIGN KEY(idComposant) REFERENCES Composant(idComposant)
+);
+
+CREATE TABLE Ecran(
+   idComposant INT,
+   tailleDiagonale DECIMAL(15,2),
+   CONSTRAINT Ecran_PK PRIMARY KEY(idComposant),
+   CONSTRAINT Ecran_Composant_FK FOREIGN KEY(idComposant) REFERENCES Composant(idComposant)
+);
+
+CREATE TABLE Alimentation(
+   idComposant INT,
+   puissance DECIMAL(15,2),
+   CONSTRAINT Alimentation_PK PRIMARY KEY(idComposant),
+   CONSTRAINT Alimentation_Composant_FK FOREIGN KEY(idComposant) REFERENCES Composant(idComposant)
+);
+
+CREATE TABLE Concepteur(
+   idUtilisateur INT,
+   CONSTRAINT Concepteur_PK PRIMARY KEY(idUtilisateur),
+   CONSTRAINT Concepteur_Utilisateur_FK FOREIGN KEY(idUtilisateur) REFERENCES Utilisateur(idUtilisateur)
+);
+
+CREATE TABLE Monteur(
+   idUtilisateur INT,
+   CONSTRAINT Monteur_PK PRIMARY KEY(idUtilisateur),
+   CONSTRAINT Monteur_Utilisateur_FK FOREIGN KEY(idUtilisateur) REFERENCES Utilisateur(idUtilisateur)
+);
+
+CREATE TABLE CarteMere(
+   idComposant INT,
+   socket VARCHAR(50),
+   format VARCHAR(50),
+   CONSTRAINT CarteMere_PK PRIMARY KEY(idComposant),
+   CONSTRAINT CarteMere_Composant_FK FOREIGN KEY(idComposant) REFERENCES Composant(idComposant)
+);
+
+CREATE TABLE Message(
+   idMessage INT AUTO_INCREMENT,
+   dateMessage DATE,
+   textMessage VARCHAR(500),
+   idOrdinateur INT NOT NULL,
+   idUtilisateur INT NOT NULL,
+   CONSTRAINT Message_PK PRIMARY KEY(idMessage),
+   CONSTRAINT Message_Ordinateur_FK FOREIGN KEY(idOrdinateur) REFERENCES Ordinateur(idOrdinateur),
+   CONSTRAINT Message_Utilisateur_FK FOREIGN KEY(idUtilisateur) REFERENCES Utilisateur(idUtilisateur)
+);
