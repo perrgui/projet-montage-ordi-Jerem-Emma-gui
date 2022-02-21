@@ -97,7 +97,7 @@ $modeles = [
         ],
 
     ];
-
+ 
     ?>
     
         
@@ -113,4 +113,33 @@ $modeles = [
 
     
 </body>
-</html>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Quantité</th>
+            <th>Date d'ajout</th>
+            <th>Nombre de modèles crées</th>
+            <th>Portable</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        /** @var array $modeles */
+        foreach ($modeles as $key => $modele) {
+            ?>
+            <tr>
+                <td><?= $key; ?></td>
+                <td><?= $modele['nom']; ?></td>
+                <td><?= $modele['quantité']; ?></td>
+                <td><?= $modele['date ajout']; ?></td>
+                <td><?= $modele['nb']; ?></td>
+                <td><?= $modele['est portable']; ?></td>
+            </tr>
+            <?php
+        }
+        ?>
+    </tbody>
+</table>
+</html>            
