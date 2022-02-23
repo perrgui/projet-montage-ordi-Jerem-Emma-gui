@@ -1,14 +1,16 @@
 <!--on inclu les pages qui comporte le header + le css  -->
 <?php
+
 include_once 'includes/variables.php';
 include_once 'includes/functions.php';
+
 ?>
 
 <!--  button login  -->
 <?php
 if (isset($_POST['login']) && $_POST['password'] == $motDePasse && !empty($_POST['login'])) {
-    $_SESSION['login'] = $_POST['login'];
-    $_SESSION['password'] = $_POST['password'];
+  $_SESSION['login'] = $_POST['login'];
+  $_SESSION['password'] = $_POST['password'];
 }
 ?>
 <!-- Html commun à toutes les pages  -->
@@ -17,6 +19,7 @@ if (isset($_POST['login']) && $_POST['password'] == $motDePasse && !empty($_POST
 
 <!-- Header -->
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -145,7 +148,8 @@ if (isset($_POST['login']) && $_POST['password'] == $motDePasse && !empty($_POST
         <?php if (isset($_SESSION['login'])) {
         ?><a class="navbar-brand" href="?page=logout">Déconnexion</a>
 
-        <?php } ?>
+
+    <?php } ?>
 
         <?php
         if (isset($_SESSION['login']) && isset($_SESSION['password'])) {
@@ -162,9 +166,10 @@ if (isset($_POST['login']) && $_POST['password'] == $motDePasse && !empty($_POST
 </header>
  <!-- <div class="column-left"></div> -->
     <div class="column">
+
     <?php
     if (!empty($_GET['disconnected']) && $_GET['disconnected'] == 1) {
-        echo " <div class=\"alert alert-danger\" role=\"alert\">
+      echo " <div class=\"alert alert-danger\" role=\"alert\">
                     Vous êtes déconnecté !
                 </div>";
     }

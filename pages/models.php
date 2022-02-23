@@ -1,7 +1,8 @@
-<!--  créer page modèle  qui contient
+    <!--  créer page modèle  qui contient
 -liste modèle 
 -modifier modèle(archiver, ajouter/retirer, historique( date , nombre d'entrées) )
 -création nouveau modèle -->
+
 <?php
 
 // nom,quantité (en stock),date ajout, nb (de fois fabriqué), est portable
