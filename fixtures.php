@@ -304,18 +304,7 @@ foreach ($commentaires as $commentaire) {
 }
 
 
-$statement = $connection->prepare('INSERT INTO commentaire (nom ,prenom, identifiant , mot_de_passe ) VALUES (:nom, :prenom , :identifiant , :mot_de_passe ');
-
-foreach ($commentaires as $commentaire) {
-    $statement->execute([
-        ':nom' => $commentaire['nom'],
-        ':prenom,' => $commentaire['prenom,'],
-        ':identifiant' => $commentaire['identifiant'],
-        ':mot_de_passe' => $commentaire['mot_de_passe'],
-    ]);
-}
-
-$statement = $connection->prepare('INSERT INTO commentaire (nom ,prenom, identifiant , mot_de_passe ) VALUES (:nom, :prenom , :identifiant , :mot_de_passe ');
+$statement = $connection->prepare('INSERT INTO employe (nom ,prenom, identifiant , mot_de_passe ) VALUES (:nom, :prenom , :identifiant , :mot_de_passe ');
 
 foreach ($commentaires as $commentaire) {
     $statement->execute([
