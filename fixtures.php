@@ -1,6 +1,57 @@
 <?php
 include 'includes/config.inc.php';
 
+$employe = [
+    [
+        "nom" => "manson",
+        "prenom" => "marylin",
+        "identifiant" => "LeConcepteur",
+        "mot_de_passe" => "donPabloEscobar"
+    ],
+
+    [
+        "nom" => "daniel",
+        "prenom" => "jacques",
+        "identifiant" => "LeMonteur",
+        "mot_de_passe" => "donVitoCorleone"
+    ],
+];
+
+
+
+$commentaire = [
+
+    [
+        "Id_Employe" => "1",
+        "datecommentaire" => "2022-02-23",
+        "contenu" => "bonjour Jacques, je me permet de t'envoyer ce message à propos du modèle Plantagenet-2150,
+        j'ai ce matin cherché à en monter un, mais je tenais a relever un problème. Les composants rentrent à 
+        peine dans la tour, j'ai donc peur sur le long terme que les performances ainsi que le système de refroidissement
+        puissent en pâtir "
+    ],
+    [
+        "Id_Employe" => "2",
+        "datecommentaire" => "2022-08-03",
+        "contenu" => "bonjour marylin, je me permet de t'envoyer ce message à propos du modèle Planhddhcfn,
+        j'ai ce matin cherché à en monter un, mais je tenais a relever un problème. Les composants rentrent à 
+        peine dans la tour, je dis des bétisses pour remplir ce message qu'il ait l'air d'un truc vraiment sérieux  "
+    ],
+    [
+        "Id_Employe" => "1",
+        "datecommentaire" => "2022-09-07",
+        "contenu" => "bonjour jacques, je me permet de t'envoyer ce message à propos du modèle Pln-897,
+        j'ai ce matin cherché à en monter un, mais je tenais a relever un problème. Les composants rentrent à 
+        peine dans la tour, je dis des bétisses pour remplir ce message qu'il ait l'air d'un truc vraiment sérieux  "
+    ],
+    [
+        "Id_Employe" => "2",
+        "datecommentaire" => "2022-02-12",
+        "contenu" => "bonjour marylin, je me permet de t'envoyer ce message à propos du modèle Pn-cd5,
+        j'ai ce matin cherché à en monter un,  je tenais a te féliciter face. Les composants rentrent à 
+        peine dans la tour, je dis des bétisses pour remplir ce message qu'il ait l'air d'un truc vraiment sérieux  "
+    ]
+];
+
 $composants = [
 
     [
@@ -136,6 +187,8 @@ $composants = [
         ]
     ],
 ];
+
+
 // $param = str_shuffle("bùmqdfsmdfl25");
 // $nom = null;
 
@@ -239,4 +292,36 @@ foreach ($composants as $composant) {
             ]);
             break;
     }
+}
+$statement = $connection->prepare('INSERT INTO commentaire (datecommentaire , Id_Employe ,  ) VALUES (:datecommentaire, :contenu, :Id_Employe ');
+
+foreach ($commentaires as $commentaire) {
+    $statement->execute([
+        ':datecommentaire' => $commentaire['datecommentaire'],
+        ':contenu' => $commentaire['contenu'],
+        ':Id_Employe' => $commentaire['Id_Employe'],
+    ]);
+}
+
+
+$statement = $connection->prepare('INSERT INTO commentaire (nom ,prenom, identifiant , mot_de_passe ) VALUES (:nom, :prenom , :identifiant , :mot_de_passe ');
+
+foreach ($commentaires as $commentaire) {
+    $statement->execute([
+        ':nom' => $commentaire['nom'],
+        ':prenom,' => $commentaire['prenom,'],
+        ':identifiant' => $commentaire['identifiant'],
+        ':mot_de_passe' => $commentaire['mot_de_passe'],
+    ]);
+}
+
+$statement = $connection->prepare('INSERT INTO commentaire (nom ,prenom, identifiant , mot_de_passe ) VALUES (:nom, :prenom , :identifiant , :mot_de_passe ');
+
+foreach ($commentaires as $commentaire) {
+    $statement->execute([
+        ':nom' => $commentaire['nom'],
+        ':prenom,' => $commentaire['prenom,'],
+        ':identifiant' => $commentaire['identifiant'],
+        ':mot_de_passe' => $commentaire['mot_de_passe'],
+    ]);
 }
