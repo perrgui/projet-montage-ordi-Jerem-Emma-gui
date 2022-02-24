@@ -1,7 +1,7 @@
 <?php
 include 'includes/config.inc.php';
 
-$employe = [
+$employes = [
     [
         "nom" => "manson",
         "prenom" => "marylin",
@@ -19,7 +19,7 @@ $employe = [
 
 
 
-$commentaire = [
+$commentaires = [
 
     [
         "Id_Employe" => "1",
@@ -247,7 +247,7 @@ foreach ($composants as $composant) {
             break;
 
         case 'ecran':
-            $subStatement = $connection->prepare('INSERT INTO ecran VALUES (:id, :Taille_de_la_diagonale)');
+            $subStatement = $connection->prepare('INSERT INTO ecran_ VALUES (:id, :Taille_de_la_diagonale)');
             $subStatement->execute([
                 ':id' => $id,
                 ':Taille_de_la_diagonale' => $composant['subdata']['Taille_de_la_diagonale']
@@ -293,24 +293,25 @@ foreach ($composants as $composant) {
             break;
     }
 }
-$statement = $connection->prepare('INSERT INTO commentaire (datecommentaire , Id_Employe ,  ) VALUES (:datecommentaire, :contenu, :Id_Employe ');
+$statement = $connection->prepare('INSERT INTO commentaires (datecommentaire , contenu , Id_Employe, Id_Modele ) VALUES (:datecommentaire, :contenu, :Id_Employe ,:Id_Modele');
 
 foreach ($commentaires as $commentaire) {
     $statement->execute([
         ':datecommentaire' => $commentaire['datecommentaire'],
         ':contenu' => $commentaire['contenu'],
         ':Id_Employe' => $commentaire['Id_Employe'],
+        ':Id_Modele' => $commentaire['Id_Modele'],
     ]);
 }
 
 
 $statement = $connection->prepare('INSERT INTO employe (nom ,prenom, identifiant , mot_de_passe ) VALUES (:nom, :prenom , :identifiant , :mot_de_passe ');
 
-foreach ($commentaires as $commentaire) {
+foreach ($employes as $employe) {
     $statement->execute([
-        ':nom' => $commentaire['nom'],
-        ':prenom,' => $commentaire['prenom,'],
-        ':identifiant' => $commentaire['identifiant'],
-        ':mot_de_passe' => $commentaire['mot_de_passe'],
+        ':nom' => $employe['nom'],
+        ':prenom,' => $employe['prenom,'],
+        ':identifiant' => $employe['identifiant'],
+        ':mot_de_passe' => $employe['mot_de_passe'],
     ]);
 }

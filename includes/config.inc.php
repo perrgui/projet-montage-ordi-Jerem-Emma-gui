@@ -4,7 +4,7 @@
 // port est le port à utiliser (3306 par défaut)
 // host est le nom d'hôte de notre serveur de BdD
 // (127.0.0.1 ou localhost, les deux sont équivalents)
-$dsn = 'mysql:dbname=cdlc-montageordi-jerem-emma-gui;port=3306;host=127.0.0.1';
+$dsn = 'mysql:dbname=montage-ordi-jerem-emma-gui;port=3306;host=127.0.0.1';
 $user = 'root'; // Utilisateur par défaut
 $password = ''; // Par défaut, pas de mot de passe sur Wamp
 
