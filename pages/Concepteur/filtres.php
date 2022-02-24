@@ -1,4 +1,6 @@
 <?php
+
+
 $sql = 'SELECT * FROM composant WHERE ';
 $criteria = [];
 if ($enStock) {
