@@ -5,7 +5,9 @@
 
     <?php
 
-    // nom,quantité (en stock),date ajout, nb (de fois fabriqué), est portable
+// nom,quantité (en stock),date ajout, nb (de fois fabriqué), est portable
+include_once '../includes/header.php';
+
 
     $modeles = [
 
@@ -99,7 +101,70 @@
 
     ];
 
-    ?>
+$login = "";
+
+$concepteur = "";
+
+class Modele
+{
+
+    protected string $nom;
+    protected string $dateajout;
+    protected  $quantite;
+    protected  $nb; //nb modèles crées .
+    protected $estportable;
+
+
+    public function __construct($nom, $dateajout, $quantite, $nb, $estportable)
+    {
+        $this->nom = $nom;
+        $this->dateajout = $dateajout;
+        $this->quantite = $quantite;
+        $this->nb = $nb;
+        $this->estportable = $estportable;
+    }
+
+    // isSubmitted(){};
+
+    // isvalid(){};
+
+}
+
+// $sql = 'SELECT * FROM composant WHERE ';
+// $modeles = [];
+// if ($enStock) {
+//     $modeles[] = 'composant.stock > 0';
+// }
+// if ($marque) {
+//     $modeles[] = 'composant.marque LIKE %'.$marque.'%';
+// }
+// if ($prix) {
+//         $modeles[] = 'composant.prix > 0';
+//         // a completer
+// }
+// if ($nombre) {
+//     $modeles[] = 'composant.nombre > 0'; 
+//     // a completer
+// }
+// if ($categorie) {
+//     $modeles[] = 'composant.categorie LIKE %'.$categorie.'%'; 
+//     // a completer
+// }
+// if ($archive) {
+//     $modeles[] = 'composant.archive$ > 0'; 
+//     // a completer
+// }
+// if ($quantite) {
+//     $modeles[] = 'composant.quantite > 0'; 
+//     // a completer
+// }
+
+
+// $mergedModeles = implode(' AND ', $modeles);
+
+// $sql .= $mergedModeles;     
+
+?>
 
 
     <!DOCTYPE html>
@@ -111,37 +176,53 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Modèles</title>
     </head>
+<body>
 
-
-
-    </body>
-    <table>
-        <thead>
+<table>
+    <thead>
+        <tr>
+            <th>Numero</th>
+            <th>Nom</th>
+            <th>Quantité</th>
+            <th>Date d'ajout</th>
+            <th>Nombre de modèles crées</th>
+            <th>Portable</th>
+            <th>Modifier </th>
+        </tr>    
+        
+    </thead>
+    <tbody>
+        <?php
+        /** @var array $modeles */
+        foreach ($modeles as $key => $modele) {
+        ?>
             <tr>
-                <th>Nom</th>
-                <th>Quantité</th>
-                <th>Date d'ajout</th>
-                <th>Nombre de modèles crées</th>
-                <th>Portable</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            /** @var array $modeles */
-            foreach ($modeles as $key => $modele) {
-            ?>
-                <tr>
-                    <td><?= $key; ?></td>
-                    <td><?= $modele['nom']; ?></td>
-                    <td><?= $modele['quantité']; ?></td>
-                    <td><?= $modele['date ajout']; ?></td>
-                    <td><?= $modele['nb']; ?></td>
-                    <td><?= $modele['est portable']; ?></td>
-                </tr>
-            <?php
-            }
-            ?>
-        </tbody>
-    </table>
+                <td><?= $key; ?></td>
+                <td><?= $modele['nom']; ?></td>
+                <td><?= $modele['quantité']; ?></td>
+                <td><?= $modele['date ajout']; ?></td>
+                <td><?= $modele['nb']; ?></td>
+                <td><?= $modele['est portable']; ?></td>
+                <?php if ($login == $concepteur) {?>
+                    <td>
+                        <a href="" class="btn-btn">Modifier</a>
+                    </td>
+                <?php }?>
+            </tr>    
+            
+            
+        <?php
+        } 
+        ?>
+    </tbody>
+    
+</table>
 
-    </html>
+ <?php if ($login == $concepteur) {?> 
+    <a href="" class="btn-primary"></a>
+<?php }?> 
+
+
+</body>
+</html>
+
