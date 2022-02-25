@@ -31,7 +31,7 @@ if (isset($_POST['login']) && $_POST['password'] == $motDePasse && !empty($_POST
 
 <body>
   <header>
-    <div class='d-flex justify-cent'>
+    <div class='d-flex justify-content center'>
       <h1>je sais plus comment on s'appelle ..</h1>
     </div>
     <h3> C'EST BIENTOT LA PAUSE ! </h3>
