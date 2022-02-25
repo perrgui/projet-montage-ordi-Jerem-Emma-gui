@@ -1,5 +1,5 @@
 <?php
-class Modeles
+class Modele
 {
 
     protected string $nom = '';
