@@ -189,10 +189,6 @@ $composants = [
 ];
 
 
-// $param = str_shuffle("bùmqdfsmdfl25");
-// $nom = null;
-
-
 $statement = $connection->prepare('INSERT INTO composant (nom , marque , prix , nb , categorie , archive , quantite ) VALUES (:nom, :marque, :prix, :nb, :categorie, :archive, :quantite)');
 
 foreach ($composants as $composant) {
@@ -293,16 +289,6 @@ foreach ($composants as $composant) {
             break;
     }
 }
-$statement = $connection->prepare('INSERT INTO commentaires (datecommentaire , contenu , Id_Employe, Id_Modele ) VALUES (:datecommentaire, :contenu, :Id_Employe ,:Id_Modele');
-
-foreach ($commentaires as $commentaire) {
-    $statement->execute([
-        ':datecommentaire' => $commentaire['datecommentaire'],
-        ':contenu' => $commentaire['contenu'],
-        ':Id_Employe' => $commentaire['Id_Employe'],
-        ':Id_Modele' => $commentaire['Id_Modele'],
-    ]);
-}
 
 
 $statement = $connection->prepare('INSERT INTO employe (nom ,prenom, identifiant , mot_de_passe ) VALUES (:nom, :prenom , :identifiant , :mot_de_passe ');
@@ -313,5 +299,17 @@ foreach ($employes as $employe) {
         ':prenom,' => $employe['prenom,'],
         ':identifiant' => $employe['identifiant'],
         ':mot_de_passe' => $employe['mot_de_passe'],
+    ]);
+}
+
+
+$statement = $connection->prepare('INSERT INTO commentaires (datecommentaire , contenu , Id_Employe, Id_Modele ) VALUES (:datecommentaire, :contenu, :Id_Employe ,:Id_Modele');
+
+foreach ($commentaires as $commentaire) {
+    $statement->execute([
+        ':datecommentaire' => $commentaire['datecommentaire'],
+        ':contenu' => $commentaire['contenu'],
+        ':Id_Employe' => $commentaire['Id_Employe'],
+        ':Id_Modele' => $commentaire['Id_Modele'],
     ]);
 }
