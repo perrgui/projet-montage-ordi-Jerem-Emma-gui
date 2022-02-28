@@ -51,7 +51,7 @@ $commentaires = [
         peine dans la tour, je dis des bétisses pour remplir ce message qu'il ait l'air d'un truc vraiment sérieux  "
     ]
 ];
-
+// j'ai rajouté une pièce de plus pour chacune des catégories.
 $composants = [
 
     [
@@ -63,7 +63,19 @@ $composants = [
         "archive" => 0,
         "quantite" => 200,
         'subdata' => [
-            "puissance" => 15.5
+            "puissance" => 15.5,
+        ]
+    ],
+    [
+        "nom" => "fetr89",
+        "marque" => "ienovo",
+        "prix" => 12.20,
+        "nb" => 10,
+        "categorie" => "alimentation",
+        "archive" => 0,
+        "quantite" => 100,
+        'subdata' => [
+            "puissance" => 18.5,
         ]
     ],
     [
@@ -76,7 +88,20 @@ $composants = [
         "quantite" => 1200,
         'subdata' => [
             'chipset' => 'sgufgbjw-52',
-            'memoire' => '32'
+            'memoire' => '32',
+        ]
+    ],
+    [
+        "nom" => "app8-5",
+        "marque" => "apple",
+        "prix" => 14000,
+        "nb" => 6,
+        "categorie" => "carte_graphique",
+        "archive" => 1,
+        "quantite" => 170,
+        'subdata' => [
+            'chipset' => 'sgw-845',
+            'memoire' => '64',
         ]
     ],
     [
@@ -94,6 +119,20 @@ $composants = [
         ]
     ],
     [
+        "nom" => "a-te583",
+        "marque" => "Nvidia",
+        "prix" => 420,
+        "nb" => 150,
+        "categorie" => "memoire_vive",
+        "archive" => 0,
+        "quantite" => 200,
+        'subdata' => [
+            'capacite' => '32',
+            'type_frequence_norme_memoire' => 'dr546',
+            'nombre_de_barettes' => 2
+        ]
+    ],
+    [
         "nom" => "s2-d54v",
         "marque" => "microsoft",
         "prix" => 20,
@@ -103,6 +142,18 @@ $composants = [
         "quantite" => 0,
         'subdata' => [
             'Taille_de_la_diagonale' => '27.2'
+        ]
+    ],
+    [
+        "nom" => "dv789",
+        "marque" => "microsoft",
+        "prix" => 200,
+        "nb" => 12,
+        "categorie" => "ecran",
+        "archive" => 0,
+        "quantite" => 30,
+        'subdata' => [
+            'Taille_de_la_diagonale' => '20'
         ]
     ],
     [
@@ -119,6 +170,19 @@ $composants = [
         ]
     ],
     [
+        "nom" => "g422",
+        "marque" => "razor",
+        "prix" => 110,
+        "nb" => 78,
+        "categorie" => "souris",
+        "archive" => 0,
+        "quantite" => 1400,
+        'subdata' => [
+            'filaire' => 0,
+            'nombre_de_touche' => 8,
+        ]
+    ],
+    [
         "nom" => "g48-96jk",
         "marque" => "logitech",
         "prix" => 130,
@@ -126,6 +190,20 @@ $composants = [
         "categorie" => "clavier",
         "archive" => 0,
         "quantite" => 900,
+        'subdata' => [
+            'sans_fil' => 0,
+            'paveNumerique' => 1,
+            'typeTouche' => "mecanique",
+        ]
+    ],
+    [
+        "nom" => "gjk-89",
+        "marque" => "logitech",
+        "prix" => 230,
+        "nb" => 23,
+        "categorie" => "clavier",
+        "archive" => 0,
+        "quantite" => 400,
         'subdata' => [
             'sans_fil' => 1,
             'paveNumerique' => 1,
@@ -147,6 +225,20 @@ $composants = [
         ]
     ],
     [
+        "nom" => "c3po-2",
+        "marque" => "HP",
+        "prix" => 1300,
+        "nb" => 40,
+        "categorie" => "processeur",
+        "archive" => 0,
+        "quantite" => 120,
+        'subdata' => [
+            'frequenceCPU' => 3.75,
+            'nombre_de_coeurs' => 7,
+            'chipset_compatible' => 'chipset1'
+        ]
+    ],
+    [
         "nom" => "r2d2",
         "marque" => "Asus",
         "prix" => 122,
@@ -160,6 +252,19 @@ $composants = [
         ]
     ],
     [
+        "nom" => "r3d3",
+        "marque" => "Asus",
+        "prix" => 142,
+        "nb" => 64,
+        "categorie" => "carte_mere",
+        "archive" => 0,
+        "quantite" => 45,
+        'subdata' => [
+            'Socket_chipset' => 'ohTresLongJonhson',
+            'format' => 'leBonDemandeBienSur'
+        ]
+    ],
+    [
         "nom" => "lod-896",
         "marque" => "energyStar",
         "prix" => 140,
@@ -170,6 +275,19 @@ $composants = [
         'subdata' => [
             'SSD' => 0,
             'capacite' => 1000
+        ]
+    ],
+    [
+        "nom" => "plot-2042",
+        "marque" => "energyStar",
+        "prix" => 220,
+        "nb" => 120,
+        "categorie" => "disque_dur",
+        "archive" => 1,
+        "quantite" => 250,
+        'subdata' => [
+            'SSD' => 1,
+            'capacite' => 500
         ]
     ],
     [
@@ -188,8 +306,8 @@ $composants = [
     ],
 ];
 
-$modeles =[ 
-   1 =>  [
+$modeles = [
+    1 =>  [
         "nom" => "Dell",
         "quantité" => 5,
         "date ajout" => "2019-02-17",
@@ -384,37 +502,37 @@ foreach ($composants as $composant) {
 }
 
 
-$statement = $connection->prepare('INSERT INTO employe (nom ,prenom, identifiant , mot_de_passe ) VALUES (:nom, :prenom , :identifiant , :mot_de_passe ');
+$statement = $connection->prepare('INSERT INTO employe (nom ,prenom, identifiant , mot_de_passe ) VALUES (:nom, :prenom , :identifiant , :mot_de_passe )');
 
 foreach ($employes as $employe) {
     $statement->execute([
         ':nom' => $employe['nom'],
-        ':prenom,' => $employe['prenom'],
+        ':prenom' => $employe['prenom'],
         ':identifiant' => $employe['identifiant'],
         ':mot_de_passe' => $employe['mot_de_passe'],
     ]);
 }
 
-
-$statement = $connection->prepare('INSERT INTO commentaires (datecommentaire , contenu , Id_Employe, Id_Modele ) VALUES (:datecommentaire, :contenu, :Id_Employe ,:Id_Modele');
+// ici il faut voir si comment va t'on lier les commentaires et modèle 
+$statement = $connection->prepare('INSERT INTO commentaires (datecommentaire , contenu , Id_Employe, Id_Modele ) VALUES (:datecommentaire, :contenu, :Id_Employe ,:Id_Modele)');
 
 foreach ($commentaires as $commentaire) {
     $statement->execute([
         ':datecommentaire' => $commentaire['datecommentaire'],
         ':contenu' => $commentaire['contenu'],
         ':Id_Employe' => $commentaire['Id_Employe'],
-        ':Id_Modele' => $commentaire['Id_Modele'],
+        // ':Id_Modele' => $commentaire['Id_Modele'],
     ]);
 }
 
-// Requête pour Modèles
-$statement = $connection->prepare('INSERT INTO modele (nom , quantite, nb, dateajout , estportable ) VALUES (:nom, :quantite, :nb, :dateajout , :estportable ');
+// Requête pour Modèles (sub-statement??)
+$statement = $connection->prepare('INSERT INTO modele (nom , quantite, nb, dateajout , estportable ) VALUES (:nom, :quantite, :nb, :dateajout , :estportable )');
 
 foreach ($modeles as $modele) {
     $statement->execute([
         ':nom' => $modele['nom'],
-        ':quantite,' => $modele['quantite,'],
-        ':nb,' => $modele['nb,'],
+        ':quantite' => $modele['quantite'],
+        ':nb' => $modele['nb'],
         ':dateajout' => $modele['dateajout'],
         ':estportable' => $modele['estportable'],
     ]);
