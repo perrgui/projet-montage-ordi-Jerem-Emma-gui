@@ -1,6 +1,7 @@
 <!--on inclu les pages qui comporte le header + le css  -->
 <?php
-
+include_once 'includes/autoload.php';
+include_once 'index.php';
 include_once 'includes/variables.php';
 include_once 'includes/functions.php';
 
