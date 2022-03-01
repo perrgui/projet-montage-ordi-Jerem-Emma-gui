@@ -17,40 +17,6 @@ $employes = [
     ],
 ];
 
-
-
-$commentaires = [
-
-    [
-        "Id_Employe" => "1",
-        "datecommentaire" => "2022-02-23",
-        "contenu" => "bonjour Jacques, je me permet de t'envoyer ce message à propos du modèle Plantagenet-2150,
-        j'ai ce matin cherché à en monter un, mais je tenais a relever un problème. Les composants rentrent à 
-        peine dans la tour, j'ai donc peur sur le long terme que les performances ainsi que le système de refroidissement
-        puissent en pâtir "
-    ],
-    [
-        "Id_Employe" => "2",
-        "datecommentaire" => "2022-08-03",
-        "contenu" => "bonjour marylin, je me permet de t'envoyer ce message à propos du modèle Planhddhcfn,
-        j'ai ce matin cherché à en monter un, mais je tenais a relever un problème. Les composants rentrent à 
-        peine dans la tour, je dis des bétisses pour remplir ce message qu'il ait l'air d'un truc vraiment sérieux  "
-    ],
-    [
-        "Id_Employe" => "1",
-        "datecommentaire" => "2022-09-07",
-        "contenu" => "bonjour jacques, je me permet de t'envoyer ce message à propos du modèle Pln-897,
-        j'ai ce matin cherché à en monter un, mais je tenais a relever un problème. Les composants rentrent à 
-        peine dans la tour, je dis des bétisses pour remplir ce message qu'il ait l'air d'un truc vraiment sérieux  "
-    ],
-    [
-        "Id_Employe" => "2",
-        "datecommentaire" => "2022-02-12",
-        "contenu" => "bonjour marylin, je me permet de t'envoyer ce message à propos du modèle Pn-cd5,
-        j'ai ce matin cherché à en monter un,  je tenais a te féliciter face. Les composants rentrent à 
-        peine dans la tour, je dis des bétisses pour remplir ce message qu'il ait l'air d'un truc vraiment sérieux  "
-    ]
-];
 // j'ai rajouté une pièce de plus pour chacune des catégories.
 $composants = [
 
@@ -307,92 +273,125 @@ $composants = [
 ];
 
 $modeles = [
-    1 =>  [
+    0 =>  [
         "nom" => "Dell",
-        "quantité" => 5,
-        "date ajout" => "2019-02-17",
+        "quantite" => 5,
+        "dateajout" => "2019-02-17",
         "nb" => 15,
-        "est portable" => 0,
-    ],
-
-    2 => [
-        "nom" => "Apple",
-        "quantité" => 20,
-        "date ajout" => "2022-02-17",
-        "nb" => 250,
-        "est portable" => 0,
+        "estportable" => 0,
+        "commentaires" => [
+            [
+                "Id_Employe" => "1",
+                "datecommentaire" => "2022-02-23",
+                "contenu" => "bonjour Jacques, je me permet de t'envoyer ce message à propos du modèle Plantagenet-2150,
+                j'ai ce matin cherché à en monter un, mais je tenais a relever un problème. Les composants rentrent à 
+                peine dans la tour, j'ai donc peur sur le long terme que les performances ainsi que le système de refroidissement
+                puissent en pâtir "
+            ],
+            [
+                "Id_Employe" => "2",
+                "datecommentaire" => "2022-08-03",
+                "contenu" => "bonjour marylin, je me permet de t'envoyer ce message à propos du modèle Planhddhcfn,
+                j'ai ce matin cherché à en monter un, mais je tenais a relever un problème. Les composants rentrent à 
+                peine dans la tour, je dis des bétisses pour remplir ce message qu'il ait l'air d'un truc vraiment sérieux  "
+            ],
+        ]
     ],
 
     1 => [
+        "nom" => "Apple",
+        "quantite" => 20,
+        "dateajout" => "2022-02-17",
+        "nb" => 250,
+        "estportable" => '0',
+        "commentaires" => [
+            [
+                "Id_Employe" => "1",
+                "datecommentaire" => "2022-09-07",
+                "contenu" => "bonjour jacques, je me permet de t'envoyer ce message à propos du modèle Pln-897,
+                j'ai ce matin cherché à en monter un, mais je tenais a relever un problème. Les composants rentrent à 
+                peine dans la tour, je dis des bétisses pour remplir ce message qu'il ait l'air d'un truc vraiment sérieux  "
+            ],
+            [
+                "Id_Employe" => "2",
+                "datecommentaire" => "2022-02-12",
+                "contenu" => "bonjour marylin, je me permet de t'envoyer ce message à propos du modèle Pn-cd5,
+                j'ai ce matin cherché à en monter un,  je tenais a te féliciter face. Les composants rentrent à 
+                peine dans la tour, je dis des bétisses pour remplir ce message qu'il ait l'air d'un truc vraiment sérieux  "
+            ],
+        ],
+    ],
+
+    2 => [
         "nom" => "Microsoft",
-        "quantité" => 70,
-        "date ajout" => "2021-04-24",
-        "nb" => 186,
-        "est portable" => 0,
+        "quantite" => 7,
+        "dateajout" => "2021-04-24",
+        "nb" => 12,
+        "estportable" => 0,
     ],
 
     3 => [
         "nom" => "Toshiba",
-        "quantité" => 150,
-        "date ajout" => "2019-05-03",
+        "quantite" => 150,
+        "dateajout" => "2019-05-03",
         "nb" => 50,
-        "est portable" => 1,
+        "estportable" => 1,
     ],
 
     4 => [
         "nom" => "Sony",
-        "quantité" => 300,
-        "date ajout" => "2018-06-08",
+        "quantite" => 300,
+        "dateajout" => "2018-06-08",
         "nb" => 100,
-        "est portable" =>  0,
+        "estportable" =>  0,
     ],
 
     5 => [
         "nom" => "HP",
-        "quantité" => 200,
-        "date ajout" => "2022-01-02",
+        "quantite" => 200,
+        "dateajout" => "2022-01-02",
         "nb" => 46,
-        "est portable" =>  1,
+        "estportable" =>  1,
     ],
 
     6 => [
         "nom" => "Asus",
-        "quantité" => 483,
-        "date ajout" => "2021-11-16",
+        "quantite" => 483,
+        "dateajout" => "2021-11-16",
         "nb" => 95,
-        "est portable" => 1,
+        "estportable" => 1,
     ],
 
     7 => [
         "nom" => "Acer",
-        "quantité" => 356,
-        "date ajout" => "2018-12-04",
+        "quantite" => 356,
+        "dateajout" => "2018-12-04",
         "nb" => 90,
-        "est portable" =>  1,
+        "estportable" =>  1,
     ],
 
     8 => [
         "nom" => "Fujitsu",
-        "quantité" => 20,
-        "date ajout" => "2021-05-14",
+        "quantite" => 20,
+        "dateajout" => "2021-05-14",
         "nb" => 256,
-        "est portable" => 0,
+        "estportable" => 0,
     ],
 
     9 => [
         "nom" => "Lenovo",
-        "quantité" => 263,
-        "date ajout" => "2021-06-12",
+        "quantite" => 263,
+        "dateajout" => "2021-06-12",
         "nb" => 58,
-        "est portable" => 0,
+        "estportable" => 0,
     ],
 
     10 => [
         "nom" => "LG",
-        "quantité" => 346,
-        "date ajout" => "2020-10-02",
+        "quantite" => 346,
+        "dateajout" => "2020-10-02",
         "nb" => 632,
-        "est portable" => 0,
+        "estportable" => 0,
     ],
 
 ];
@@ -400,6 +399,7 @@ $modeles = [
 // $param = str_shuffle("bùmqdfsmdfl25");
 // $nom = null;
 
+$connection->exec("SET FOREIGN_KEY_CHECKS = 0;TRUNCATE composant;TRUNCATE processeur;TRUNCATE alimentation;TRUNCATE carte_graphique;TRUNCATE memoire_vive;TRUNCATE ecran_;TRUNCATE souris;TRUNCATE clavier;TRUNCATE carte_mere;TRUNCATE disque_dur;TRUNCATE employe;TRUNCATE commentaires;TRUNCATE modele;SET FOREIGN_KEY_CHECKS = 1;");
 
 $statement = $connection->prepare('INSERT INTO composant (nom , marque , prix , nb , categorie , archive , quantite ) VALUES (:nom, :marque, :prix, :nb, :categorie, :archive, :quantite)');
 foreach ($composants as $composant) {
@@ -513,27 +513,31 @@ foreach ($employes as $employe) {
     ]);
 }
 
-// ici il faut voir si comment va t'on lier les commentaires et modèle 
-$statement = $connection->prepare('INSERT INTO commentaires (datecommentaire , contenu , Id_Employe, Id_Modele ) VALUES (:datecommentaire, :contenu, :Id_Employe ,:Id_Modele)');
-
-foreach ($commentaires as $commentaire) {
-    $statement->execute([
-        ':datecommentaire' => $commentaire['datecommentaire'],
-        ':contenu' => $commentaire['contenu'],
-        ':Id_Employe' => $commentaire['Id_Employe'],
-        // ':Id_Modele' => $commentaire['Id_Modele'],
-    ]);
-}
 
 // Requête pour Modèles (sub-statement??)
-$statement = $connection->prepare('INSERT INTO modele (nom , quantite, nb, dateajout , estportable ) VALUES (:nom, :quantite, :nb, :dateajout , :estportable )');
+$statement = $connection->prepare('INSERT INTO modele (nom , quantite, nb, dateajout , estportable ) VALUES (:nom, :quantite, :nb, :dateajout, :estportable )');
 
 foreach ($modeles as $modele) {
     $statement->execute([
-        ':nom' => $modele['nom'],
-        ':quantite' => $modele['quantite'],
-        ':nb' => $modele['nb'],
-        ':dateajout' => $modele['dateajout'],
+        ':nom'         => $modele['nom'],
+        ':quantite'    => $modele['quantite'],
+        ':dateajout'   => $modele['dateajout'],
+        ':nb'          => $modele['nb'],
         ':estportable' => $modele['estportable'],
     ]);
+
+    $id = $connection->lastInsertId();
+
+    if (!empty($modele['commentaires'])) {
+        $statementCommentaire = $connection->prepare('INSERT INTO commentaires (datecommentaire , contenu , Id_Employe, Id_Modele ) VALUES (:datecommentaire, :contenu, :Id_Employe ,:Id_Modele)');
+
+        foreach ($modele['commentaires'] as $commentaire) {
+            $statementCommentaire->execute([
+                ':datecommentaire' => $commentaire['datecommentaire'],
+                ':contenu' => $commentaire['contenu'],
+                ':Id_Employe' => $commentaire['Id_Employe'],
+                ':Id_Modele' => $id,
+            ]);
+        }
+    }
 }
