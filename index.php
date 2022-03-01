@@ -1,4 +1,17 @@
 <?php
+<<<<<<< HEAD
+=======
+include_once 'includes/header.php';
+?>
+
+
+
+
+
+<?php 
+include_once 'includes/footer.php';
+?>
+>>>>>>> 2df582d (aaaaaa)
 
 include_once 'includes/autoload.php';
 include_once 'includes/header.php';

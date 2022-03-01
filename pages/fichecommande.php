@@ -1,7 +1,5 @@
-<?php 
-	include("page/login.php");
-	include("page/logout.php");
-?>
+
+<!--
 <script language='javascript' type="text/javascript">
 function recolter()
 {
@@ -78,14 +76,7 @@ function recolter()
 						Réf. Client :<br />
 						<select id="recup_client" name="recup_client" onchange="document.getElementById('client').value='recup_client';recolter();">
 							<option value="0">Choisir client</option>
-							<?php 
-								$requete = "SELECT Client_num FROM clients ORDER BY Client_num;";
-								$retours = mysqli_query($liaison, $requete);
-								while($retour = mysqli_fetch_array($retours))
-								{
-									echo "<option value='".$retour["Client_num"]."'>".$retour["Client_num"]."</option>";
-								}
-							?>
+						
 						</select>
 					</div>
 					<div style="width:25%;height:75px;float:left;font-size:16px;font-weight:bold;text-align:left;">
@@ -112,14 +103,7 @@ function recolter()
 						Réf. Composants :<br />
 						<select id="ref_composants" name="ref_composants" onchange="document.getElementById('param').value='recup_composants';recolter();">
 							<option value="0">Réf. composants</option>
-							<?php 
-								$requete = "SELECT composant_code FROM composant ORDER BY composant_code;";
-								$retours = mysqli_query($liaison, $requete);
-								while($retour = mysqli_fetch_array($retours))
-								{
-									echo "<option value='".$retour["Article_code"]."'>".$retour["Article_code"]."</option>";
-								}							
-							?>
+						
 						</select>
 					</div>
 					<div style="width:15%;height:75px;float:left;font-size:16px;font-weight:bold;text-align:left;">
@@ -163,7 +147,135 @@ function recolter()
 			
 			<div class="div_saut_ligne" style="height:30px;">
 			</div>
+			 -->
+
+
+<!-- DUCOUP PHP ET UTILISATION DU PDO -->
+
+<!-- PHP -->
+<?php
+include 'header.php';
+$statement = $connection->prepare('SELECT* FROM  composant (nom , marque , nb , categorie , archive , quantite ) JOIN modele ON id.composant
+ = id.models
+WHERE id.models IS ');
+
+            foreach ($composants as $composant) {
+                $statement->execute([
+                    ':nom' => $composant['nom'],
+                    ':marque' => $composant['marque'],
+                    ':prix' => $composant['prix'],
+                    ':nb' => $composant['nb'],
+                    ':categorie' => $composant['categorie'],
+                    ':archive' => $composant['archive'],
+                    ':quantite' => $composant['quantite'],
+                ]);
+            } 
+			?>
 			
-<?php 
-	include("footer.php");
-?>
+
+<!-- HTML  -->
+			<div style="width:100%;display:block;text-align:center;">
+			</div>
+			
+			<div class="div_saut_ligne" style="height:30px;">
+			</div>						
+			
+			<div style="float:left;width:10%;height:40px;"></div>
+			<div style="float:left;width:80%;height:auto;text-align:center;">
+			<div class="titre_h1">
+			<h1>Modèle choisie par le client</h1>
+			</div>
+			</div>
+			<div style="float:left;width:10%;height:40px;"></div>
+			
+			<div class="div_saut_ligne" style="height:30px;">
+			</div>
+			
+			<div style="float:left;width:10%;height:350px;"></div>
+			<div style="float:left;width:80%;height:350px;text-align:center;">
+			<form id="modèle" name="modèle" method="post" >
+				<div class="titre_h1" style="height:350px;">
+					<div style="width:10%;height:50px;float:left;"></div>
+					<div style="width:35%;height:50px;float:left;font-size:20px;font-weight:bold;text-align:left;color:#a13638;">
+					
+						Réf. Client :<br />
+						<select id="recup_client" name="recup_client" onchange="document.getElementById('client').value='recup_client';recolter();">
+							<option value="0">Choisir client</option>
+						
+						</select>
+					</div>
+					<div style="width:25%;height:75px;float:left;font-size:16px;font-weight:bold;text-align:left;">
+						Nom du client :<br />
+						<input type="text" id="nom_client" name="nom_client" />
+					</div>
+					<div style="width:25%;height:75px;float:left;font-size:16px;font-weight:bold;text-align:left;">
+						Prénom du client :<br />
+						<input type="text" id="prenom_client" name="prenom_client" />
+					</div>					
+					<div style="width:10%;height:75px;float:left;"></div>
+
+			<div class="div_saut_ligne" style="height:5px;">
+			</div>
+
+					<div style="width:10%;height:50px;float:left;"></div>
+					<div style="width:80%;height:50px;float:left;font-size:20px;font-weight:bold;text-align:left;color:#a13638;">
+						<u> Modèle commandé</u><br />
+					</div>
+					<!-- barre de progression -->
+					<div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+</div>
+					<div style="width:10%;height:50px;float:left;"></div>	
+					
+					<div style="width:10%;height:75px;float:left;"></div>
+					<div style="width:15%;height:75px;float:left;font-size:16px;font-weight:bold;text-align:left;">
+						Réf. Composants :<br />
+						<select id="ref_composants" name="ref_composants" onchange="document.getElementById('param').value='recup_composants';recolter();">
+							<option value="0">Réf. composants</option>
+						
+						</select>
+					</div>
+					<div style="width:15%;height:75px;float:left;font-size:16px;font-weight:bold;text-align:left;">
+						Qté en stock :<br />
+						<input type="text" id="qte" name="qte" disabled style="text-align:right;" />
+					</div>
+					
+
+					<div style="width:10%;height:75px;float:left;"></div>
+					<div style="width:15%;height:75px;float:left;font-size:16px;font-weight:bold;text-align:left;">
+						Nombre :<br />
+						<input type="text" id="nb_commande" name="nb_commande" />
+					</div>
+					
+			</form>
+			</div>
+			<div style="float:left;width:10%;height:350px;"></div>	
+
+			<div class="div_saut_ligne" style="height:50px;">
+			</div>						
+			
+			<div style="float:left;width:10%;height:25px;"></div>
+			<div style="float:left;width:80%;height:auto;text-align:center;">
+				<div class="titre_h1" style="float:left;height:auto;width:100%;">
+					<div style="float:left;width:5%;height:25px;"></div>
+					<div style="width:15%;height:25px;float:left;font-size:16px;font-weight:bold;text-align:left;">
+						Réf.
+					</div>
+					<div style="width:15%;height:25px;float:left;font-size:16px;font-weight:bold;text-align:left;">
+						Qté
+					</div>
+					<div style="width:30%;height:25px;float:left;font-size:16px;font-weight:bold;text-align:left;overflow:hidden;">
+						Composant
+					</div>
+					<div style="width:15%;height:25px;float:left;font-size:16px;font-weight:bold;text-align:right;">
+					
+					
+				</div>
+			</div>
+			<div style="float:left;width:10%;height:auto;"></div>	
+			
+			<div class="div_saut_ligne" style="height:30px;">
+			</div>
+
+<?php
+include 'page/footer.php';
