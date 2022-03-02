@@ -6,27 +6,48 @@ if (isset($_POST['username'])) {
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
 
-    "SELECT * FROM `employe` 
-        LEFT JOIN monteur ON monteur.Id_Employe = employe.Id_Employe 
-        LEFT JOIN concepteur ON concepteur.Id_Employe = employe.Id_Employe 
-    WHERE identifiant = '$username'";
-
     if (empty($password)) {
         $errors[] = 'Mot de passe vide';
-    } elseif ($password != $defaultPassword) {
-        $errors[] = 'Mot de passe erroné';
     }
 
-
-    if (!empty($username)) {
+    if (empty($username)) {
         $errors[] = 'Username vide';
     }
 
-    if (empty($errors)) {
-        $_SESSION['username'] = $_POST['username'];
+    $sql = "SELECT 
+        employe.Id_Employe as Id_Employe,
+        employe.identifiant,
+        employe.mot_de_passe,
+        employe.nom,
+        employe.prenom,
+        monteur.est_monteur,
+        concepteur.estconcepteur
+    FROM `employe` 
+        LEFT JOIN monteur ON monteur.Id_Employe = employe.Id_Employe 
+        LEFT JOIN concepteur ON concepteur.Id_Employe = employe.Id_Employe 
+    WHERE identifiant = :username";
+
+    $statement = $connection->prepare($sql);
+    $statement->execute([
+        ':username' => $username,
+    ]);
+
+    $employe = $statement->fetch();
+    if (empty($employe)) {
+        $errors[] = 'Username non trouvé';
+    } elseif ($password != $employe['password']) {
+        $errors[] = 'Mot de passe erroné';
     }
 
-    header('Location: ?page=concepteur&login=success');
+    if (empty($errors)) {
+        $_SESSION['identifiant'] = $employe['identifiant'];
+
+        if ($employe['est_monteur']) {
+            // header('Location: ?page=monteur&login=success');
+        } elseif ($employe['estconcepteur']) {
+            header('Location: ?page=concepteur&login=success');
+        }
+    }
 }
 
 ?>

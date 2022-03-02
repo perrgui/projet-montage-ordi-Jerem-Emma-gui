@@ -1,5 +1,7 @@
 <?php
+ob_start();
 include_once 'includes/autoload.php';
+include_once 'includes/config.inc.php';
 include_once 'includes/header.php';
 
 $page = 'login';
@@ -14,3 +16,4 @@ if ($page == 'pageConcepteur') {
 }
 
 include_once 'includes/footer.php';
+echo ob_get_clean();

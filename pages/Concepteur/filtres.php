@@ -24,3 +24,16 @@ if ($marque) {
 $mergedCriteria = implode(' AND ', $criteria);
 
 $sql .= $mergedCriteria;
+
+?>
+// filtres models
+
+<?php
+
+ "SELECT * FROM `modeles` 
+  LEFT JOIN composant ON composant.Id_Modeles = modeles.Id_Modeles 
+  WHERE categorie;
+ WHERE prix;
+ WHERE commentaire ";
+
+ ?>
