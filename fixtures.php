@@ -17,41 +17,7 @@ $employes = [
     ],
 ];
 
-
-
-$commentaires = [
-
-    [
-        "Id_Employe" => "1",
-        "datecommentaire" => "2022-02-23",
-        "contenu" => "bonjour Jacques, je me permet de t'envoyer ce message à propos du modèle Plantagenet-2150,
-        j'ai ce matin cherché à en monter un, mais je tenais a relever un problème. Les composants rentrent à 
-        peine dans la tour, j'ai donc peur sur le long terme que les performances ainsi que le système de refroidissement
-        puissent en pâtir "
-    ],
-    [
-        "Id_Employe" => "2",
-        "datecommentaire" => "2022-08-03",
-        "contenu" => "bonjour marylin, je me permet de t'envoyer ce message à propos du modèle Planhddhcfn,
-        j'ai ce matin cherché à en monter un, mais je tenais a relever un problème. Les composants rentrent à 
-        peine dans la tour, je dis des bétisses pour remplir ce message qu'il ait l'air d'un truc vraiment sérieux  "
-    ],
-    [
-        "Id_Employe" => "1",
-        "datecommentaire" => "2022-09-07",
-        "contenu" => "bonjour jacques, je me permet de t'envoyer ce message à propos du modèle Pln-897,
-        j'ai ce matin cherché à en monter un, mais je tenais a relever un problème. Les composants rentrent à 
-        peine dans la tour, je dis des bétisses pour remplir ce message qu'il ait l'air d'un truc vraiment sérieux  "
-    ],
-    [
-        "Id_Employe" => "2",
-        "datecommentaire" => "2022-02-12",
-        "contenu" => "bonjour marylin, je me permet de t'envoyer ce message à propos du modèle Pn-cd5,
-        j'ai ce matin cherché à en monter un,  je tenais a te féliciter face. Les composants rentrent à 
-        peine dans la tour, je dis des bétisses pour remplir ce message qu'il ait l'air d'un truc vraiment sérieux  "
-    ]
-];
-
+// j'ai rajouté une pièce de plus pour chacune des catégories.
 $composants = [
 
     [
@@ -63,7 +29,19 @@ $composants = [
         "archive" => 0,
         "quantite" => 200,
         'subdata' => [
-            "puissance" => 15.5
+            "puissance" => 15.5,
+        ]
+    ],
+    [
+        "nom" => "fetr89",
+        "marque" => "ienovo",
+        "prix" => 12.20,
+        "nb" => 10,
+        "categorie" => "alimentation",
+        "archive" => 0,
+        "quantite" => 100,
+        'subdata' => [
+            "puissance" => 18.5,
         ]
     ],
     [
@@ -76,7 +54,20 @@ $composants = [
         "quantite" => 1200,
         'subdata' => [
             'chipset' => 'sgufgbjw-52',
-            'memoire' => '32'
+            'memoire' => '32',
+        ]
+    ],
+    [
+        "nom" => "app8-5",
+        "marque" => "apple",
+        "prix" => 14000,
+        "nb" => 6,
+        "categorie" => "carte_graphique",
+        "archive" => 1,
+        "quantite" => 170,
+        'subdata' => [
+            'chipset' => 'sgw-845',
+            'memoire' => '64',
         ]
     ],
     [
@@ -94,6 +85,20 @@ $composants = [
         ]
     ],
     [
+        "nom" => "a-te583",
+        "marque" => "Nvidia",
+        "prix" => 420,
+        "nb" => 150,
+        "categorie" => "memoire_vive",
+        "archive" => 0,
+        "quantite" => 200,
+        'subdata' => [
+            'capacite' => '32',
+            'type_frequence_norme_memoire' => 'dr546',
+            'nombre_de_barettes' => 2
+        ]
+    ],
+    [
         "nom" => "s2-d54v",
         "marque" => "microsoft",
         "prix" => 20,
@@ -103,6 +108,18 @@ $composants = [
         "quantite" => 0,
         'subdata' => [
             'Taille_de_la_diagonale' => '27.2'
+        ]
+    ],
+    [
+        "nom" => "dv789",
+        "marque" => "microsoft",
+        "prix" => 200,
+        "nb" => 12,
+        "categorie" => "ecran",
+        "archive" => 0,
+        "quantite" => 30,
+        'subdata' => [
+            'Taille_de_la_diagonale' => '20'
         ]
     ],
     [
@@ -119,6 +136,19 @@ $composants = [
         ]
     ],
     [
+        "nom" => "g422",
+        "marque" => "razor",
+        "prix" => 110,
+        "nb" => 78,
+        "categorie" => "souris",
+        "archive" => 0,
+        "quantite" => 1400,
+        'subdata' => [
+            'filaire' => 0,
+            'nombre_de_touche' => 8,
+        ]
+    ],
+    [
         "nom" => "g48-96jk",
         "marque" => "logitech",
         "prix" => 130,
@@ -126,6 +156,20 @@ $composants = [
         "categorie" => "clavier",
         "archive" => 0,
         "quantite" => 900,
+        'subdata' => [
+            'sans_fil' => 0,
+            'paveNumerique' => 1,
+            'typeTouche' => "mecanique",
+        ]
+    ],
+    [
+        "nom" => "gjk-89",
+        "marque" => "logitech",
+        "prix" => 230,
+        "nb" => 23,
+        "categorie" => "clavier",
+        "archive" => 0,
+        "quantite" => 400,
         'subdata' => [
             'sans_fil' => 1,
             'paveNumerique' => 1,
@@ -147,6 +191,20 @@ $composants = [
         ]
     ],
     [
+        "nom" => "c3po-2",
+        "marque" => "HP",
+        "prix" => 1300,
+        "nb" => 40,
+        "categorie" => "processeur",
+        "archive" => 0,
+        "quantite" => 120,
+        'subdata' => [
+            'frequenceCPU' => 3.75,
+            'nombre_de_coeurs' => 7,
+            'chipset_compatible' => 'chipset1'
+        ]
+    ],
+    [
         "nom" => "r2d2",
         "marque" => "Asus",
         "prix" => 122,
@@ -160,6 +218,19 @@ $composants = [
         ]
     ],
     [
+        "nom" => "r3d3",
+        "marque" => "Asus",
+        "prix" => 142,
+        "nb" => 64,
+        "categorie" => "carte_mere",
+        "archive" => 0,
+        "quantite" => 45,
+        'subdata' => [
+            'Socket_chipset' => 'ohTresLongJonhson',
+            'format' => 'leBonDemandeBienSur'
+        ]
+    ],
+    [
         "nom" => "lod-896",
         "marque" => "energyStar",
         "prix" => 140,
@@ -170,6 +241,19 @@ $composants = [
         'subdata' => [
             'SSD' => 0,
             'capacite' => 1000
+        ]
+    ],
+    [
+        "nom" => "plot-2042",
+        "marque" => "energyStar",
+        "prix" => 220,
+        "nb" => 120,
+        "categorie" => "disque_dur",
+        "archive" => 1,
+        "quantite" => 250,
+        'subdata' => [
+            'SSD' => 1,
+            'capacite' => 500
         ]
     ],
     [
@@ -188,93 +272,126 @@ $composants = [
     ],
 ];
 
-$modeles =[ 
-   1 =>  [
+$modeles = [
+    0 =>  [
         "nom" => "Dell",
-        "quantité" => 5,
-        "date ajout" => "2019-02-17",
+        "quantite" => 5,
+        "dateajout" => "2019-02-17",
         "nb" => 15,
-        "est portable" => 0,
-    ],
-
-    2 => [
-        "nom" => "Apple",
-        "quantité" => 20,
-        "date ajout" => "2022-02-17",
-        "nb" => 250,
-        "est portable" => 0,
+        "estportable" => 0,
+        "commentaires" => [
+            [
+                "Id_Employe" => "1",
+                "datecommentaire" => "2022-02-23",
+                "contenu" => "bonjour Jacques, je me permet de t'envoyer ce message à propos du modèle Plantagenet-2150,
+                j'ai ce matin cherché à en monter un, mais je tenais a relever un problème. Les composants rentrent à 
+                peine dans la tour, j'ai donc peur sur le long terme que les performances ainsi que le système de refroidissement
+                puissent en pâtir "
+            ],
+            [
+                "Id_Employe" => "2",
+                "datecommentaire" => "2022-08-03",
+                "contenu" => "bonjour marylin, je me permet de t'envoyer ce message à propos du modèle Planhddhcfn,
+                j'ai ce matin cherché à en monter un, mais je tenais a relever un problème. Les composants rentrent à 
+                peine dans la tour, je dis des bétisses pour remplir ce message qu'il ait l'air d'un truc vraiment sérieux  "
+            ],
+        ]
     ],
 
     1 => [
+        "nom" => "Apple",
+        "quantite" => 20,
+        "dateajout" => "2022-02-17",
+        "nb" => 250,
+        "estportable" => '0',
+        "commentaires" => [
+            [
+                "Id_Employe" => "1",
+                "datecommentaire" => "2022-09-07",
+                "contenu" => "bonjour jacques, je me permet de t'envoyer ce message à propos du modèle Pln-897,
+                j'ai ce matin cherché à en monter un, mais je tenais a relever un problème. Les composants rentrent à 
+                peine dans la tour, je dis des bétisses pour remplir ce message qu'il ait l'air d'un truc vraiment sérieux  "
+            ],
+            [
+                "Id_Employe" => "2",
+                "datecommentaire" => "2022-02-12",
+                "contenu" => "bonjour marylin, je me permet de t'envoyer ce message à propos du modèle Pn-cd5,
+                j'ai ce matin cherché à en monter un,  je tenais a te féliciter face. Les composants rentrent à 
+                peine dans la tour, je dis des bétisses pour remplir ce message qu'il ait l'air d'un truc vraiment sérieux  "
+            ],
+        ],
+    ],
+
+    2 => [
         "nom" => "Microsoft",
-        "quantité" => 70,
-        "date ajout" => "2021-04-24",
-        "nb" => 186,
-        "est portable" => 0,
+        "quantite" => 7,
+        "dateajout" => "2021-04-24",
+        "nb" => 12,
+        "estportable" => 0,
     ],
 
     3 => [
         "nom" => "Toshiba",
-        "quantité" => 150,
-        "date ajout" => "2019-05-03",
+        "quantite" => 150,
+        "dateajout" => "2019-05-03",
         "nb" => 50,
-        "est portable" => 1,
+        "estportable" => 1,
     ],
 
     4 => [
         "nom" => "Sony",
-        "quantité" => 300,
-        "date ajout" => "2018-06-08",
+        "quantite" => 300,
+        "dateajout" => "2018-06-08",
         "nb" => 100,
-        "est portable" =>  0,
+        "estportable" =>  0,
     ],
 
     5 => [
         "nom" => "HP",
-        "quantité" => 200,
-        "date ajout" => "2022-01-02",
+        "quantite" => 200,
+        "dateajout" => "2022-01-02",
         "nb" => 46,
-        "est portable" =>  1,
+        "estportable" =>  1,
     ],
 
     6 => [
         "nom" => "Asus",
-        "quantité" => 483,
-        "date ajout" => "2021-11-16",
+        "quantite" => 483,
+        "dateajout" => "2021-11-16",
         "nb" => 95,
-        "est portable" => 1,
+        "estportable" => 1,
     ],
 
     7 => [
         "nom" => "Acer",
-        "quantité" => 356,
-        "date ajout" => "2018-12-04",
+        "quantite" => 356,
+        "dateajout" => "2018-12-04",
         "nb" => 90,
-        "est portable" =>  1,
+        "estportable" =>  1,
     ],
 
     8 => [
         "nom" => "Fujitsu",
-        "quantité" => 20,
-        "date ajout" => "2021-05-14",
+        "quantite" => 20,
+        "dateajout" => "2021-05-14",
         "nb" => 256,
-        "est portable" => 0,
+        "estportable" => 0,
     ],
 
     9 => [
         "nom" => "Lenovo",
-        "quantité" => 263,
-        "date ajout" => "2021-06-12",
+        "quantite" => 263,
+        "dateajout" => "2021-06-12",
         "nb" => 58,
-        "est portable" => 0,
+        "estportable" => 0,
     ],
 
     10 => [
         "nom" => "LG",
-        "quantité" => 346,
-        "date ajout" => "2020-10-02",
+        "quantite" => 346,
+        "dateajout" => "2020-10-02",
         "nb" => 632,
-        "est portable" => 0,
+        "estportable" => 0,
     ],
 
 ];
@@ -282,6 +399,7 @@ $modeles =[
 // $param = str_shuffle("bùmqdfsmdfl25");
 // $nom = null;
 
+$connection->exec("SET FOREIGN_KEY_CHECKS = 0;TRUNCATE composant;TRUNCATE processeur;TRUNCATE alimentation;TRUNCATE carte_graphique;TRUNCATE memoire_vive;TRUNCATE ecran_;TRUNCATE souris;TRUNCATE clavier;TRUNCATE carte_mere;TRUNCATE disque_dur;TRUNCATE employe;TRUNCATE commentaires;TRUNCATE modele;SET FOREIGN_KEY_CHECKS = 1;");
 
 $statement = $connection->prepare('INSERT INTO composant (nom , marque , prix , nb , categorie , archive , quantite ) VALUES (:nom, :marque, :prix, :nb, :categorie, :archive, :quantite)');
 foreach ($composants as $composant) {
@@ -384,38 +502,42 @@ foreach ($composants as $composant) {
 }
 
 
-$statement = $connection->prepare('INSERT INTO employe (nom ,prenom, identifiant , mot_de_passe ) VALUES (:nom, :prenom , :identifiant , :mot_de_passe ');
+$statement = $connection->prepare('INSERT INTO employe (nom ,prenom, identifiant , mot_de_passe ) VALUES (:nom, :prenom , :identifiant , :mot_de_passe )');
 
 foreach ($employes as $employe) {
     $statement->execute([
         ':nom' => $employe['nom'],
-        ':prenom,' => $employe['prenom'],
+        ':prenom' => $employe['prenom'],
         ':identifiant' => $employe['identifiant'],
         ':mot_de_passe' => $employe['mot_de_passe'],
     ]);
 }
 
 
-$statement = $connection->prepare('INSERT INTO commentaires (datecommentaire , contenu , Id_Employe, Id_Modele ) VALUES (:datecommentaire, :contenu, :Id_Employe ,:Id_Modele');
-
-foreach ($commentaires as $commentaire) {
-    $statement->execute([
-        ':datecommentaire' => $commentaire['datecommentaire'],
-        ':contenu' => $commentaire['contenu'],
-        ':Id_Employe' => $commentaire['Id_Employe'],
-        ':Id_Modele' => $commentaire['Id_Modele'],
-    ]);
-}
-
-// Requête pour Modèles
-$statement = $connection->prepare('INSERT INTO modele (nom , quantite, nb, dateajout , estportable ) VALUES (:nom, :quantite, :nb, :dateajout , :estportable ');
+// Requête pour Modèles (sub-statement??)
+$statement = $connection->prepare('INSERT INTO modele (nom , quantite, nb, dateajout , estportable ) VALUES (:nom, :quantite, :nb, :dateajout, :estportable )');
 
 foreach ($modeles as $modele) {
     $statement->execute([
-        ':nom' => $modele['nom'],
-        ':quantite,' => $modele['quantite,'],
-        ':nb,' => $modele['nb,'],
-        ':dateajout' => $modele['dateajout'],
+        ':nom'         => $modele['nom'],
+        ':quantite'    => $modele['quantite'],
+        ':dateajout'   => $modele['dateajout'],
+        ':nb'          => $modele['nb'],
         ':estportable' => $modele['estportable'],
     ]);
+
+    $id = $connection->lastInsertId();
+
+    if (!empty($modele['commentaires'])) {
+        $statementCommentaire = $connection->prepare('INSERT INTO commentaires (datecommentaire , contenu , Id_Employe, Id_Modele ) VALUES (:datecommentaire, :contenu, :Id_Employe ,:Id_Modele)');
+
+        foreach ($modele['commentaires'] as $commentaire) {
+            $statementCommentaire->execute([
+                ':datecommentaire' => $commentaire['datecommentaire'],
+                ':contenu' => $commentaire['contenu'],
+                ':Id_Employe' => $commentaire['Id_Employe'],
+                ':Id_Modele' => $id,
+            ]);
+        }
+    }
 }

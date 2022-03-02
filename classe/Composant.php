@@ -14,16 +14,7 @@ class Composant
     protected $archive;
 
 
-    public function __construct($nom, $marque, $categorie, $quantite, $prix, $nb, $archive)
-    {
-        $this->nom = $nom;
-        $this->marque = $marque;
-        $this->categorie = $categorie;
-        $this->quantite = $quantite;
-        $this->prix = $prix;
-        $this->nb = $nb;
-        $this->archive = $archive;
-    }
+
 
     /**
      * Get the value of nom
