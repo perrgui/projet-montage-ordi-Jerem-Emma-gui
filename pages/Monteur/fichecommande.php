@@ -156,7 +156,7 @@ function recolter()
 <?php
 include 'header.php';
 $statement = $connection->prepare('SELECT* FROM  composant (nom , marque , nb , categorie , archive , quantite ) JOIN modele ON id.composant
- = id.models
+ = id.models 
 WHERE id.models IS ');
 
             foreach ($composants as $composant) {
