@@ -9,7 +9,8 @@ while ($data = mysql_fetch_assoc
 {
     echo "<h1>{$data[" Titre"]}</h1>";
     echo "<p>{$data["Contenu"]}</p>";
-echo "<p>.date ("j/n/y G:i", strtotime ($data["date"]))."</p>;
+echo "<p>.date ( strtotime ($data[,"date"])).</p>"; 
+}
 
 $sql="SELECT*FROM news WHERE id=$id";
 $req= mysql_query ($sql) or die .$sql.mysql_error ());
