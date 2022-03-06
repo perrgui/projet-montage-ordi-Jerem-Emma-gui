@@ -12,6 +12,8 @@ if (!empty($_GET['page'])) {
 
 if ($page == 'pageConcepteur') {
     include_once 'pages/concepteur/' . $page . '.php';
+} elseif ($page == 'fixtures') {
+    include_once  $page . '.php';
 } else {
     include_once 'pages/' . $page . '.php';
 }

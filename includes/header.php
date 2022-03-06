@@ -33,9 +33,9 @@ if (isset($_POST['login']) && $_POST['password'] == $motDePasse && !empty($_POST
 <body>
   <header>
     <div class='d-flex justify-content center'>
-      <h1>je sais plus comment on s'appelle ..</h1>
+      <h1>CLDL</h1>
     </div>
-    <h3> C'EST BIENTOT LA PAUSE ! </h3>
+    <h3> Site Conception/Montage </h3>
 
 
     <!-- ****** NAV TEST (quand on avait pas le time)**** -->
@@ -69,9 +69,9 @@ if (isset($_POST['login']) && $_POST['password'] == $motDePasse && !empty($_POST
                       <div class="row">
                         <div class="col-lg-6 mb-4">
                           <ul class="list-unstyled">
-                            <li class="nav-item"><a href="" class="nav-link text-small pb-0">Liste </a></li>
-                            <li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Modifier</a></li>
-                            <li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Créer</a></li>
+                            <li class="nav-item"><a href="?page=models" class="nav-link text-small pb-0">Liste </a></li>
+                            <li class="nav-item"><a href="?page=modifierModele" class="nav-link text-small pb-0 ">Modifier</a></li>
+                            <li class="nav-item"><a href=" ?page=pageConcepteur" class="nav-link text-small pb-0 ">Créer</a></li>
                           </ul>
                         </div>
                       </div>
@@ -97,9 +97,9 @@ if (isset($_POST['login']) && $_POST['password'] == $motDePasse && !empty($_POST
                     <div class="col-lg-6 mb-4">
                       <div class="col-lg-6 mb-4">
                         <ul class="list-unstyled">
-                          <li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Catalogue</a></li>
-                          <li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Modifier un modèle</a></li>
-                          <li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Nouvelle conception</a></li>
+                          <li class="nav-item"><a href="?page=models" class="nav-link text-small pb-0 ">Catalogue</a></li>
+                          <li class="nav-item"><a href="?page=modifierModele" class="nav-link text-small pb-0 ">Modifier un modèle</a></li>
+                          <li class="nav-item"><a href="?page=pageConcepteur" class="nav-link text-small pb-0 ">Nouvelle conception</a></li>
                         </ul>
                       </div>
                     </div>
@@ -156,7 +156,7 @@ if (isset($_POST['login']) && $_POST['password'] == $motDePasse && !empty($_POST
                         <h6 class="font-weight-bold text-uppercase">A faire</h6>
                         <ul class="list-unstyled">
                           <li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Nouveaux</a></li>
-                          <li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Hisotrique</a></li>
+                          <li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Historique</a></li>
                         </ul>
                       </div>
                     </div>
