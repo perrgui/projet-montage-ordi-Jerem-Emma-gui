@@ -30,10 +30,19 @@ $sql .= $mergedCriteria;
 
 <?php
 
- "SELECT * FROM `modeles` 
+"SELECT * FROM `modeles` 
   LEFT JOIN composant ON composant.Id_Modeles = modeles.Id_Modeles 
   WHERE categorie;
  WHERE prix;
  WHERE commentaire ";
 
- ?>
+?>
+<?php
+
+"SELECT * FROM `commentaires` 
+  LEFT JOIN composant ON composant.Id_Modeles = modeles.Id_Modeles 
+  WHERE categorie;
+ WHERE prix;
+ WHERE commentaire ";
+
+?>

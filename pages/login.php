@@ -35,15 +35,16 @@ if (isset($_POST['username'])) {
     $employe = $statement->fetch();
     if (empty($employe)) {
         $errors[] = 'Username non trouvé';
-    } elseif ($password != $employe['password']) {
+    } elseif ($password != $employe['mot_de_passe']) {
         $errors[] = 'Mot de passe erroné';
     }
 
     if (empty($errors)) {
         $_SESSION['identifiant'] = $employe['identifiant'];
+        $_SESSION['mot_de_passe'] = $employe['mot_de_passe'];
 
         if ($employe['est_monteur']) {
-            // header('Location: ?page=monteur&login=success');
+            header('Location: ?page=monteur&login=success');
         } elseif ($employe['estconcepteur']) {
             header('Location: ?page=concepteur&login=success');
         }
@@ -59,7 +60,6 @@ foreach ($errors as $error) {
     <!-- Vous êtes bien déconnecté via Tailwind -->
 <?php
 }
-
 ?>
 
 <form action="" method="post">

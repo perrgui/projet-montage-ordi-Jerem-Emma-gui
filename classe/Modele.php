@@ -1,4 +1,6 @@
 <?php
+//creation classe modèle (duh!!! useless comment) 
+
 class Modele
 {
 
